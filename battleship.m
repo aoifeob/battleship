@@ -3,31 +3,31 @@ playagain=
 'y';
 while
 
-playagain=='y' %loop to restart the game if the user wants to play again
-clc
+  playagain=='y' %loop to restart the game if the user wants to play again
+  clc
 
-%clears the screen to start a new game
-grid=zeros(10,10);
+  %clears the screen to start a new game
+  grid=zeros(10,10);
 
-%generates a 10x10 grid
-for shiplength=1:1:5 %loop will generate 4 more ships
-orientation=round(rand);
+  %generates a 10x10 grid
+  for shiplength=1:1:5 %loop will generate 4 more ships
+    orientation=round(rand);
 
-% determines horizontal or vertical
-% pick random locations
-if orientation == 1 %horizontal
-while true
-trial_x=round(rand*(length(grid)-shiplength))+1;
+    % determines horizontal or vertical
+    % pick random locations
+      if orientation == 1 %horizontal
+        while true
+          trial_x=round(rand*(length(grid)-shiplength))+1;
 
-%determines x co-ordinate
-trial_y=round(rand*9)+1;
+          %determines x co-ordinate
+          trial_y=round(rand*9)+1;
 
-%determines y co-ordinate
-% place ship
-counter = 0;
+          %determines y co-ordinate
+          % place ship
+          counter = 0;
 
-for i = 1:1:shiplength-1
-counter = counter + grid(trial_x+i,trial_y);
+            for i = 1:1:shiplength-1
+        counter = counter + grid(trial_x+i,trial_y);
 
 end
 if counter ==0;
